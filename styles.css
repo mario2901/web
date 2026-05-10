@@ -209,22 +209,14 @@ a:hover {
 
 .mockup-container {
   display: flex;
-<<<<<<< HEAD
-  gap: 1.5rem;
-=======
   flex-direction: row;
   gap: 2rem;
->>>>>>> a600407 (Upd2)
   align-items: flex-end;
   justify-content: center;
   perspective: 1200px;
   position: relative;
   width: 100%;
-<<<<<<< HEAD
-  min-height: auto;
-=======
   max-height: 400px;
->>>>>>> a600407 (Upd2)
   flex-wrap: wrap;
 }
 
@@ -250,15 +242,8 @@ a:hover {
 }
 
 .laptop-screen {
-<<<<<<< HEAD
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  aspect-ratio: 420 / 280;
-=======
   width: 580px;
   height: 385px;
->>>>>>> a600407 (Upd2)
   background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
   border-radius: 8px;
   overflow: hidden;
@@ -423,15 +408,8 @@ a:hover {
 }
 
 .iphone-screen {
-<<<<<<< HEAD
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-  aspect-ratio: 160 / 320;
-=======
   width: 220px;
   height: 440px;
->>>>>>> a600407 (Upd2)
   background: white;
   border-radius: 50px;
   border: 12px solid #000;
@@ -871,6 +849,7 @@ a:hover {
     gap: 1rem;
     flex-direction: row;
     width: 100%;
+    max-height: 400px;
   }
 
   .mockup-container > div {
@@ -883,31 +862,12 @@ a:hover {
   }
 
   .laptop-screen {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .iphone-mockup {
-    max-width: 100%;
-  }
-
-  .iphone-screen {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .mockup-container {
-    max-height: 400px;
-    gap: 1rem;
-  }
-
-  .laptop-screen {
     width: 380px;
     height: 255px;
   }
 
   .iphone-mockup {
-    width: 170px;
+    max-width: 100%;
   }
 
   .iphone-screen {
