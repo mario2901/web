@@ -206,7 +206,435 @@ a:hover {
   justify-content: center;
   perspective: 1200px;
 }
+/* ============================================
+   MOCKUP CONTAINER - RESPONSIVE
+   ============================================ */
 
+.mockup-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* ============================================
+   LAPTOP MOCKUP
+   ============================================ */
+
+.laptop-mockup {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  animation: rotateInLaptop 1.2s ease-out;
+  flex-shrink: 0;
+}
+
+@keyframes rotateInLaptop {
+  from {
+    opacity: 0;
+    transform: rotateX(20deg) rotateY(-25deg) translateZ(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(5deg) rotateY(-15deg) translateZ(0);
+  }
+}
+
+.laptop-screen {
+  width: 480px;
+  height: 310px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 10px solid #2a2a2a;
+}
+
+.browser-bar {
+  background: #f0f0f0;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.browser-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.browser-buttons span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.browser-buttons span:nth-child(1) {
+  background: #ff5f56;
+}
+.browser-buttons span:nth-child(2) {
+  background: #ffbd2e;
+}
+.browser-buttons span:nth-child(3) {
+  background: #27c93f;
+}
+
+.browser-url {
+  flex: 1;
+  font-size: 10px;
+  color: #666;
+  font-family: monospace;
+  background: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.screen-content {
+  padding: 16px 20px;
+  height: calc(100% - 40px);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-demo {
+  background: linear-gradient(135deg, #17c7a6, #1eddb5);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.nav-items {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-items span {
+  font-size: 10px;
+  color: #555;
+  cursor: pointer;
+}
+
+.nav-items span:hover {
+  color: #17c7a6;
+}
+
+.content-hero-section {
+  background: linear-gradient(135deg, #0a0e14, #1a2332);
+  border-radius: 8px;
+  padding: 16px 18px;
+  color: white;
+}
+
+.content-hero-section h2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.content-hero-section p {
+  font-size: 11px;
+  color: #17c7a6;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #17c7a6, #1eddb5);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.content-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.mini-card {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px 8px;
+  border-left: 3px solid #17c7a6;
+}
+
+.mini-card-icon {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.mini-card-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: #0a0e14;
+  margin-bottom: 2px;
+}
+
+.mini-card-text {
+  font-size: 8px;
+  color: #888;
+  line-height: 1.4;
+}
+
+.content-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 16px;
+  font-weight: 700;
+  color: #17c7a6;
+}
+
+.stat-label {
+  font-size: 8px;
+  color: #999;
+}
+
+.laptop-base {
+  width: 560px;
+  height: 22px;
+  background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+  border-radius: 0 0 6px 6px;
+  margin-top: -4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   IPHONE MOCKUP
+   ============================================ */
+
+.iphone-mockup {
+  animation: rotateInPhone 1.2s ease-out;
+  flex-shrink: 0;
+}
+
+@keyframes rotateInPhone {
+  from {
+    opacity: 0;
+    transform: rotateX(20deg) rotateY(25deg) translateZ(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(5deg) rotateY(15deg) translateZ(0);
+  }
+}
+
+.iphone-screen {
+  width: 180px;
+  height: 360px;
+  background: white;
+  border-radius: 40px;
+  border: 10px solid #111;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.iphone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 22px;
+  background: #111;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+
+.phone-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.phone-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #111;
+}
+
+.phone-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.phone-nav-logo {
+  background: linear-gradient(135deg, #17c7a6, #1eddb5);
+  border-radius: 3px;
+  padding: 2px 7px;
+  font-size: 9px;
+  font-weight: 700;
+  color: white;
+}
+
+.phone-nav-menu {
+  font-size: 14px;
+  color: #333;
+}
+
+.phone-hero {
+  background: linear-gradient(135deg, #0a0e14, #1a2332);
+  padding: 14px 12px;
+}
+
+.phone-hero h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.phone-hero p {
+  font-size: 9px;
+  color: #17c7a6;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.phone-cta {
+  background: linear-gradient(135deg, #17c7a6, #1eddb5);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.phone-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.phone-card {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 7px 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-left: 3px solid #17c7a6;
+}
+
+.phone-card-icon {
+  font-size: 14px;
+}
+
+.phone-card-info {
+  flex: 1;
+}
+
+.phone-card-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: #0a0e14;
+}
+
+.phone-card-text {
+  font-size: 8px;
+  color: #999;
+}
+
+.iphone-home-button {
+  width: 120px;
+  height: 18px;
+  background: #111;
+  border-radius: 20px;
+  margin: 6px auto 0;
+}
+
+/* ============================================
+   RESPONSIVE - MOBILNI PRIKAZ
+   ============================================ */
+
+@media (max-width: 768px) {
+  .mockup-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .laptop-screen {
+    width: 320px;
+    height: 210px;
+  }
+
+  .laptop-base {
+    width: 380px;
+  }
+
+  .content-hero-section h2 {
+    font-size: 12px;
+  }
+
+  .content-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-num {
+    font-size: 13px;
+  }
+
+  .laptop-mockup {
+    transform: none;
+    animation: none;
+  }
+
+  .iphone-mockup {
+    transform: none;
+    animation: none;
+  }
+}
+/*
 .mockup-container {
   display: flex;
   flex-direction: column;
@@ -220,9 +648,9 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* ============================================
+============================================
    Laptop Mockup
-   ============================================ */
+   ============================================ 
 
 .laptop-mockup {
   perspective: 1000px;
@@ -386,9 +814,9 @@ a:hover {
   filter: blur(4px);
 }
 
-/* ============================================
+ ============================================
    iPhone Mockup
-   ============================================ */
+   ============================================ 
 
 .iphone-mockup {
   width: 220px;
@@ -496,6 +924,7 @@ a:hover {
   margin: 10px auto 0;
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
 }
+*/
 
 /* ============================================
    Features Section
@@ -597,8 +1026,8 @@ a:hover {
 
 .industries-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3.5rem;
   justify-items: center;
 }
 
@@ -619,8 +1048,10 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 150px;
+  /* space between items */
+
+  width: 200px;
+  height: 200px;
   background-color: rgba(23, 199, 166, 0.1);
   border-radius: 12px;
   transition: var(--transition);
@@ -890,7 +1321,7 @@ a:hover {
 
   .industries-icons {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .industry-icon {
@@ -988,7 +1419,7 @@ a:hover {
 
   .industries-icons {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .cta-box {
